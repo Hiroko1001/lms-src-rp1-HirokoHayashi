@@ -153,11 +153,7 @@ public class LoginSessionFilter implements Filter {
 		} else {
 			return true;
 		}
-		if() {
-			
-		}else
-		JOptionPane.showMessageDialog(null, "過去日の勤怠に未入力があります");
-		｝
+
 	}
 
 	@Override
