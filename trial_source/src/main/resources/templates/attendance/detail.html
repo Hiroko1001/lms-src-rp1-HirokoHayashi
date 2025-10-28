@@ -9,14 +9,14 @@
 	
 	<!-- 過去日未入力確認ダイアログ -->
 	<script>
-		if(){
-			alert('過去日の退勤に未入力があります');
-		}
+		//if(){
+			//alert('過去日の勤怠に未入力があります。');
+	//	}
 		
 		
 	</script>
 		
-
+<input type="hidden" id="" th:value="${スコープ変数名}">
 	<!-- 完了メッセージ -->
 	<th:block th:if="${not #strings.isEmpty(message)}" id="message">
 		<div class="alert alert-info alert-dismissible fade in" role="alert">

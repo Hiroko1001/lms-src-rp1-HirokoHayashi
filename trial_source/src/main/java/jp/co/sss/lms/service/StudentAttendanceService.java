@@ -68,6 +68,7 @@ public class StudentAttendanceService {
 			if (statusEnum != null) {
 				dto.setStatusDispName(statusEnum.name);
 			}
+
 		}
 
 		return attendanceManagementDtoList;
@@ -333,5 +334,19 @@ public class StudentAttendanceService {
 		// 完了メッセージ
 		return messageUtil.getMessage(Constants.PROP_KEY_ATTENDANCE_UPDATE_NOTICE);
 	}
+
+	/*
+	 * 勤怠情報（受講生入力）未入力件数取得
+	 * */
+	
+	//List<t_student_attendance> notEnterCount(Integer lmsUserId,
+		//	Integer deleteFlg, Integer trainingDate) {
+		
+		//if(t_student_attendance.tarainingDate &lt; 0) {
+			//false
+		//}
+		
+	//}
+	//return  notEnterCount;
 
 }

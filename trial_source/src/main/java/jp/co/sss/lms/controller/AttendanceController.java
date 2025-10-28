@@ -46,8 +46,17 @@ public class AttendanceController {
 		List<AttendanceManagementDto> attendanceManagementDtoList = studentAttendanceService
 				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());
 		model.addAttribute("attendanceManagementDtoList", attendanceManagementDtoList);
+		
+		//サービス呼び出します
+		//①当日日付けの取得
+		//②api呼び出し
+		//③呼び出した結果が0より大きかったらtrueを返す。それ以外はfalse
+		
+		//結果を画面に渡す
+		
 
 		return "attendance/detail";
+		
 	}
 
 	/**

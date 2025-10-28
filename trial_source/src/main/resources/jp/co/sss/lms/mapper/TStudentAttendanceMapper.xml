@@ -95,9 +95,15 @@
 	</update>
 
 	<select id="notEnterCount" resultType="Integer">
-		SELECT lmsUserId, deleteFlg, trainingDate
+		SELECT COUNT(*)
 		FROM t_student_attendance
-		WHERE trainingDate = null;
+		WHERE t_student_attendance.lmsUserId = #{lmsUserId}
+		AND t_student_attendance.deleteFlg = #{deleteFlg}
+		AND t_student_attendance.trainingDate &lt; #{trainingDate}; 
+		AND t_student_attendance.status != 1
+		AND (t_student_attendance.trainingStartTime = "t_student_attendance.trainingEndTime = " 
+		OR t_student_attendance.trainingStartTime IS NULL 
+		OR t_student_attendance.trainingEndTime IS NULL)
 	</select>
 
 </mapper>
